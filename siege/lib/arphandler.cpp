@@ -6,5 +6,4 @@ ARPHandler::ARPHandler(std::string *hw_victim, std::string *hw_target, std::stri
     this->ip_victim = *ip_victim;
     this->ip_target = *ip_target;
     *this->to_stop = false;
-    
 }

